@@ -30,20 +30,16 @@ You can find more examples and documentation at the following links:
 ## Installation
 
 1. **Clone the Repository**
-   
    ```bash
    git clone https://your-repository-url.git
    cd your-repository-directory
-
 2. **Install Dependencies**
-
     Run the following command to install the necessary dependencies:
-
     ```bash       
     npm install
-
 ## Usage
-    To start the crawler, run:
+
+To start the crawler, run:
 
     ```bash
     npm start
