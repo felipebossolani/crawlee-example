@@ -16,6 +16,17 @@ Before setting up the project, ensure you have the following installed:
 - Node.js (version 12 or higher)
 - npm (usually comes with Node.js)
 
+## Getting started with Crawlee
+
+This example uses `PlaywrightCrawler` to recursively crawl https://crawlee.dev using the browser automation library [Playwright](https://playwright.dev).
+
+You can find more examples and documentation at the following links:
+
+- [Step-by-step tutorial](https://crawlee.dev/docs/introduction) for Crawlee
+- `PlaywrightCrawler` [API documentation](https://crawlee.dev/api/playwright-crawler/class/PlaywrightCrawler)
+- Other [examples](https://crawlee.dev/docs/examples/playwright-crawler)
+
+
 ## Installation
 
 1. **Clone the Repository**
