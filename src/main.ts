@@ -5,17 +5,19 @@ import { PlaywrightCrawler } from 'crawlee';
 // browser controlled by the Playwright library.
 const crawler = new PlaywrightCrawler({
     // Use the requestHandler to process each of the crawled pages.
-    async requestHandler({ request, page, enqueueLinks, log, pushData }) {
+    async requestHandler({ request, page, log, pushData }) {
         const title = await page.title();
         log.info(`Title of ${request.loadedUrl} is '${title}'`);
 
-        // Save results as JSON to ./storage/datasets/default
-        await pushData({ title, url: request.loadedUrl });
+        const links = await page.$$eval('.css-m5ahyg a.css-9mylee', anchors => 
+            anchors.map(anchor => anchor.href)
+        );
 
-        // Extract links from the current page
-        // and add them to the crawling queue.
-        await enqueueLinks();
-    },
+        console.log(links);
+
+        // Save results as JSON to ./storage/datasets/default
+        await pushData({ links, url: request.loadedUrl });
+    },    
     // Comment this option to scrape the full website.
     maxRequestsPerCrawl: 20,
     // Uncomment this option to see the browser window.
@@ -23,4 +25,4 @@ const crawler = new PlaywrightCrawler({
 });
 
 // Add first URL to the queue and start the crawl.
-await crawler.run(['https://crawlee.dev']);
+await crawler.run(['https://www.nytimes.com/']);
