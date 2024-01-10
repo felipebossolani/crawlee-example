@@ -30,19 +30,23 @@ You can find more examples and documentation at the following links:
 ## Installation
 
 1. **Clone the Repository**
-   ```bash
+   ```
    git clone https://your-repository-url.git
    cd your-repository-directory
+   ```
 2. **Install Dependencies**
     Run the following command to install the necessary dependencies:
-    ```bash       
+    ```
     npm install
+    ```
+
 ## Usage
 
 To start the crawler, run:
 
-    ```bash
-    npm start
+```
+npm start
+```
 
 The script will begin to scrape the New York Times website and output the extracted data. You can modify the script to tailor the output to your requirements.
 
